@@ -351,7 +351,7 @@ public class MainActivityTest {
 
     @Test
     public void shouldPhonenumberEditTextGoForwardWhenImeOptionsClicked() {
-        onView(withId(R.id.txtPhonenumber)).perform(typeText("66666666"),
+        onView(withId(R.id.txtPhonenumber)).perform(click(), typeText("66666666"),
                 pressImeActionButton());
         onView(withId(R.id.txtAddress)).check(matches(hasFocus()));
     }
@@ -365,7 +365,7 @@ public class MainActivityTest {
 
     @Test
     public void shouldWebEditTextSaveWhenImeOptionsClicked() {
-        onView(withId(R.id.txtWeb)).perform(typeText("test"), pressImeActionButton(), closeSoftKeyboard());
+        onView(withId(R.id.txtWeb)).perform(click(), typeText("test"), pressImeActionButton(), closeSoftKeyboard());
         onView(withId(com.google.android.material.R.id.snackbar_text)).check(
                 matches(withText(R.string.main_error_saving)));
     }
