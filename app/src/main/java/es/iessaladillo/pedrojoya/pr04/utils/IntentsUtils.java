@@ -17,8 +17,7 @@ public class IntentsUtils {
     }
 
     public static Intent newSearchInWeb(String text){
-        Intent searchIntent = new Intent(Intent.ACTION_WEB_SEARCH);
-        searchIntent.putExtra(SearchManager.QUERY,text);
+        Intent searchIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(text.trim()));
         return searchIntent;
     }
 

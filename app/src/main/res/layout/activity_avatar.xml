@@ -9,7 +9,7 @@
 
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/imgAvatar1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:scaleType="center"
@@ -19,7 +19,7 @@
         app:srcCompat="@drawable/cat1" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/imgAvatar2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:scaleType="center"
@@ -29,97 +29,96 @@
         app:srcCompat="@drawable/cat2" />
 
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/imgAvatar4"
         android:layout_width="0dp"
         android:layout_height="142dp"
         android:scaleType="center"
         app:layout_constraintDimensionRatio="w,4:3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6"
+        app:layout_constraintTop_toBottomOf="@+id/imgAvatar2"
         app:srcCompat="@drawable/cat4" />
 
     <ImageView
-        android:id="@+id/imageView8"
+        android:id="@+id/imgAvatar3"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:scaleType="center"
         app:layout_constraintDimensionRatio="w,4:3"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        app:layout_constraintTop_toBottomOf="@+id/imgAvatar1"
         app:srcCompat="@drawable/cat3" />
 
     <ImageView
-        android:id="@+id/imageView9"
+        android:id="@+id/imgAvatar5"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:scaleType="center"
         app:layout_constraintDimensionRatio="w,4:3"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView8"
+        app:layout_constraintTop_toBottomOf="@+id/imgAvatar3"
         app:srcCompat="@drawable/cat5" />
 
     <ImageView
-        android:id="@+id/imageView10"
+        android:id="@+id/imgAvatar6"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:scaleType="center"
         app:layout_constraintDimensionRatio="w,4:3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView7"
+        app:layout_constraintTop_toBottomOf="@+id/imgAvatar4"
         app:srcCompat="@drawable/cat6" />
 
     <TextView
-        android:id="@+id/lblCat1"
+        android:id="@+id/lblAvatar1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView8"
-        app:layout_constraintEnd_toEndOf="@+id/imageView5" />
+        app:layout_constraintBottom_toBottomOf="@+id/imgAvatar1"
+        app:layout_constraintEnd_toEndOf="@+id/imgAvatar1" />
 
     <TextView
-        android:id="@+id/lblCat2"
+        android:id="@+id/lblAvatar2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView7"
-        app:layout_constraintEnd_toEndOf="@+id/imageView6" />
+        app:layout_constraintBottom_toBottomOf="@+id/imgAvatar2"
+        app:layout_constraintEnd_toEndOf="@+id/imgAvatar2" />
 
     <TextView
-        android:id="@+id/lblCat3"
+        android:id="@+id/lblAvatar3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/imageView9"
-        app:layout_constraintEnd_toEndOf="@+id/imageView8" />
+        app:layout_constraintBottom_toTopOf="@+id/imgAvatar5"
+        app:layout_constraintEnd_toEndOf="@+id/imgAvatar3" />
 
     <TextView
-        android:id="@+id/lblCat4"
+        android:id="@+id/lblAvatar4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView10"
-        app:layout_constraintEnd_toEndOf="@+id/imageView7" />
+        app:layout_constraintBottom_toTopOf="@+id/imgAvatar6"
+        app:layout_constraintEnd_toEndOf="@+id/imgAvatar4" />
 
     <TextView
-        android:id="@+id/lblCat5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView9"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/lblCat6"
+        android:id="@+id/lblAvatar5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView10"
-        app:layout_constraintEnd_toEndOf="@+id/imageView10" />
+        app:layout_constraintBottom_toBottomOf="@+id/imgAvatar5"
+        app:layout_constraintEnd_toEndOf="@+id/imgAvatar5" />
+
+    <TextView
+        android:id="@+id/lblAvatar6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgAvatar6"
+        app:layout_constraintEnd_toEndOf="@+id/imgAvatar6" />
 </androidx.constraintlayout.widget.ConstraintLayout>

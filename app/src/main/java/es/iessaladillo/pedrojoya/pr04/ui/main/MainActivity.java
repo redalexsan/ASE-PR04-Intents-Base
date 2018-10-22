@@ -20,6 +20,7 @@ import androidx.core.app.ActivityCompat;
 import es.iessaladillo.pedrojoya.pr04.R;
 import es.iessaladillo.pedrojoya.pr04.data.local.Database;
 import es.iessaladillo.pedrojoya.pr04.data.local.model.Avatar;
+import es.iessaladillo.pedrojoya.pr04.ui.avatar.AvatarActivity;
 import es.iessaladillo.pedrojoya.pr04.utils.IntentsUtils;
 import es.iessaladillo.pedrojoya.pr04.utils.KeyboardUtils;
 import es.iessaladillo.pedrojoya.pr04.utils.NewtworkUtils;
@@ -28,6 +29,9 @@ import es.iessaladillo.pedrojoya.pr04.utils.ValidationUtils;
 @SuppressWarnings("WeakerAccess")
 public class MainActivity extends AppCompatActivity {
 
+    private static final int RC_OTRA = 1;
+
+    Avatar avatar = Database.getInstance().getDefaultAvatar();
     private ImageView profileImage;
     private TextView profileName;
     private EditText editTextName;
@@ -50,8 +54,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initViews();
-        defaultProfile();
-        // TODO
+        setProfileAvatar(avatar);
     }
 
     private void defaultProfile() {
@@ -78,9 +81,10 @@ public class MainActivity extends AppCompatActivity {
         phoneImage = ActivityCompat.requireViewById(this, R.id.imgPhonenumber);
         adressImage = ActivityCompat.requireViewById(this, R.id.imgAddress);
         webImage = ActivityCompat.requireViewById(this, R.id.imgWeb);
+        editTextName.requestFocus();
 
-        profileName.setOnClickListener(v -> newProfile());
-        profileImage.setOnClickListener(v -> newProfile());
+        profileName.setOnClickListener(v -> AvatarActivity.startForResult(MainActivity.this,avatar,RC_OTRA));
+        profileImage.setOnClickListener(v -> AvatarActivity.startForResult(MainActivity.this,avatar,RC_OTRA));
 
         emailImage.setOnClickListener(v -> startIntents(IntentsUtils.newMessage(editTextEmail.getText().toString()),true));
         phoneImage.setOnClickListener(v -> startIntents(IntentsUtils.newDialIntent(editTextPhone.getText().toString()),false));
@@ -167,20 +171,32 @@ public class MainActivity extends AppCompatActivity {
             text.setTypeface(Typeface.DEFAULT);
     }
 
-    private void newProfile(){
-        Avatar randomAvatar = Database.getInstance().getRandomAvatar();
-
-        profileName.setText(randomAvatar.getName());
-        profileImage.setImageResource(randomAvatar.getImageResId());
-        profileImage.setTag(randomAvatar.getImageResId());
-    }
-
     private void startIntents(Intent intent,boolean connection){
         if(connection) {
             if (NewtworkUtils.isConnectionAvailable(getApplicationContext()))
                 startActivity(intent);
         }
         else startActivity(intent);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data){
+        if(resultCode == RESULT_OK && requestCode == RC_OTRA){
+            obtainResponseData(data);
+        }
+    }
+
+    private void obtainResponseData(Intent data) {
+        if(data != null && data.hasExtra(AvatarActivity.EXTRA_AVATAR)){
+            avatar = data.getParcelableExtra(AvatarActivity.EXTRA_AVATAR);
+        }
+        setProfileAvatar(avatar);
+    }
+
+    private void setProfileAvatar(Avatar avatar) {
+        profileImage.setImageResource(avatar.getImageResId());
+        profileName.setText(avatar.getName());
+        profileImage.setTag(avatar.getImageResId());
     }
 
     // DO NOT TOUCH
