@@ -17,8 +17,14 @@ public class IntentsUtils {
     }
 
     public static Intent newSearchInWeb(String text){
-        Intent searchIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(text.trim()));
-        return searchIntent;
+        Intent intent;
+       if(text.matches("(http).*"))
+           intent = new Intent(Intent.ACTION_VIEW, Uri.parse(text.trim()));
+        else  {
+            intent = new Intent(Intent.ACTION_WEB_SEARCH);
+            intent.putExtra(SearchManager.QUERY,text.trim());
+       }
+        return  intent;
     }
 
     public static Intent newMessage(String email){
