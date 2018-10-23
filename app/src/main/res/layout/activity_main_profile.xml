@@ -48,7 +48,6 @@
         android:ems="10"
         android:hint="@string/main_hint_email"
         android:inputType="textWebEmailAddress"
-        android:nextFocusRight="@+id/txtPhonenumber"
         android:nextFocusDown="@+id/txtPhonenumber"
         app:layout_constraintEnd_toStartOf="@+id/imgEmail"
         app:layout_constraintHorizontal_bias="0.0"
@@ -98,6 +97,7 @@
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:hint="@string/main_hint_phone"
+        android:nextFocusDown="@+id/txtAddress"
         android:inputType="number"
         app:layout_constraintEnd_toStartOf="@+id/imgPhonenumber"
         app:layout_constraintTop_toBottomOf="@+id/lblPhonenumber" />

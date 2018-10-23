@@ -11,9 +11,12 @@
     <ImageView
         android:id="@+id/imgAvatar1"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:scaleType="center"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/imgAvatar3"
         app:layout_constraintDimensionRatio="w,4:3"
+        app:layout_constraintEnd_toStartOf="@+id/imgAvatar2"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/cat1" />
@@ -21,29 +24,38 @@
     <ImageView
         android:id="@+id/imgAvatar2"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:scaleType="center"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/imgAvatar4"
         app:layout_constraintDimensionRatio="w,4:3"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imgAvatar1"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/cat2" />
 
     <ImageView
         android:id="@+id/imgAvatar4"
         android:layout_width="0dp"
-        android:layout_height="142dp"
-        android:scaleType="center"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/imgAvatar6"
         app:layout_constraintDimensionRatio="w,4:3"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imgAvatar3"
         app:layout_constraintTop_toBottomOf="@+id/imgAvatar2"
         app:srcCompat="@drawable/cat4" />
 
     <ImageView
         android:id="@+id/imgAvatar3"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:scaleType="center"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/imgAvatar5"
         app:layout_constraintDimensionRatio="w,4:3"
+        app:layout_constraintEnd_toStartOf="@+id/imgAvatar4"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgAvatar1"
         app:srcCompat="@drawable/cat3" />
@@ -51,9 +63,12 @@
     <ImageView
         android:id="@+id/imgAvatar5"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:scaleType="center"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintDimensionRatio="w,4:3"
+        app:layout_constraintEnd_toStartOf="@+id/imgAvatar6"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgAvatar3"
         app:srcCompat="@drawable/cat5" />
@@ -61,10 +76,13 @@
     <ImageView
         android:id="@+id/imgAvatar6"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:scaleType="center"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintDimensionRatio="w,4:3"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imgAvatar5"
         app:layout_constraintTop_toBottomOf="@+id/imgAvatar4"
         app:srcCompat="@drawable/cat6" />
 
@@ -92,7 +110,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/imgAvatar5"
+        app:layout_constraintBottom_toBottomOf="@+id/imgAvatar3"
         app:layout_constraintEnd_toEndOf="@+id/imgAvatar3" />
 
     <TextView
@@ -101,7 +119,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/imgAvatar6"
+        app:layout_constraintBottom_toBottomOf="@+id/imgAvatar4"
         app:layout_constraintEnd_toEndOf="@+id/imgAvatar4" />
 
     <TextView
@@ -121,4 +139,5 @@
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="@+id/imgAvatar6"
         app:layout_constraintEnd_toEndOf="@+id/imgAvatar6" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
