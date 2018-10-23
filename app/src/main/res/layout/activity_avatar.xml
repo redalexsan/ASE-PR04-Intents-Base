@@ -14,9 +14,9 @@
         android:layout_height="0dp"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toTopOf="@+id/imgAvatar3"
-        app:layout_constraintDimensionRatio="w,4:3"
         app:layout_constraintEnd_toStartOf="@+id/imgAvatar2"
         app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/cat1" />
@@ -27,7 +27,6 @@
         android:layout_height="0dp"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toTopOf="@+id/imgAvatar4"
-        app:layout_constraintDimensionRatio="w,4:3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/imgAvatar1"
@@ -40,7 +39,6 @@
         android:layout_height="0dp"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toTopOf="@+id/imgAvatar6"
-        app:layout_constraintDimensionRatio="w,4:3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/imgAvatar3"
@@ -53,9 +51,9 @@
         android:layout_height="0dp"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toTopOf="@+id/imgAvatar5"
-        app:layout_constraintDimensionRatio="w,4:3"
         app:layout_constraintEnd_toStartOf="@+id/imgAvatar4"
         app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgAvatar1"
         app:srcCompat="@drawable/cat3" />
@@ -66,7 +64,6 @@
         android:layout_height="0dp"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintDimensionRatio="w,4:3"
         app:layout_constraintEnd_toStartOf="@+id/imgAvatar6"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -79,7 +76,6 @@
         android:layout_height="0dp"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintDimensionRatio="w,4:3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/imgAvatar5"
@@ -90,8 +86,8 @@
         android:id="@+id/lblAvatar1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="@dimen/main_margin_8dp"
+        android:layout_marginBottom="@dimen/main_margin_8dp"
         app:layout_constraintBottom_toBottomOf="@+id/imgAvatar1"
         app:layout_constraintEnd_toEndOf="@+id/imgAvatar1" />
 
@@ -99,8 +95,8 @@
         android:id="@+id/lblAvatar2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="@dimen/main_margin_8dp"
+        android:layout_marginBottom="@dimen/main_margin_8dp"
         app:layout_constraintBottom_toBottomOf="@+id/imgAvatar2"
         app:layout_constraintEnd_toEndOf="@+id/imgAvatar2" />
 
@@ -108,8 +104,8 @@
         android:id="@+id/lblAvatar3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="@dimen/main_margin_8dp"
+        android:layout_marginBottom="@dimen/main_margin_8dp"
         app:layout_constraintBottom_toBottomOf="@+id/imgAvatar3"
         app:layout_constraintEnd_toEndOf="@+id/imgAvatar3" />
 
@@ -117,8 +113,8 @@
         android:id="@+id/lblAvatar4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="@dimen/main_margin_8dp"
+        android:layout_marginBottom="@dimen/main_margin_8dp"
         app:layout_constraintBottom_toBottomOf="@+id/imgAvatar4"
         app:layout_constraintEnd_toEndOf="@+id/imgAvatar4" />
 
@@ -126,8 +122,8 @@
         android:id="@+id/lblAvatar5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="@dimen/main_margin_8dp"
+        android:layout_marginBottom="@dimen/main_margin_8dp"
         app:layout_constraintBottom_toBottomOf="@+id/imgAvatar5"
         app:layout_constraintEnd_toEndOf="@+id/imgAvatar5" />
 
@@ -135,8 +131,8 @@
         android:id="@+id/lblAvatar6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="@dimen/main_margin_8dp"
+        android:layout_marginBottom="@dimen/main_margin_8dp"
         app:layout_constraintBottom_toBottomOf="@+id/imgAvatar6"
         app:layout_constraintEnd_toEndOf="@+id/imgAvatar6" />
 
