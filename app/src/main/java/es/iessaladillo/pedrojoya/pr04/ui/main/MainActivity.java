@@ -8,7 +8,6 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -49,6 +48,8 @@ public class MainActivity extends AppCompatActivity {
     private TextView textViewAdress;
     private TextView textViewWeb;
 
+    // MUY BIEN, ALEJANDRO. HAS MEJORADO MUCHO TU CÓDIGO.
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
         setProfileAvatar(avatar);
     }
 
+    // ELIMINA EL CÓDIGO MUERTO AL QUE YA NO LLAMES.
     private void defaultProfile() {
         Avatar defaultProfile = Database.getInstance().getDefaultAvatar();
         profileImage.setImageResource(defaultProfile.getImageResId());
@@ -172,6 +174,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void startIntents(Intent intent,boolean connection){
+        // DEBERÍAS COMPROBAR QUE HAY ALGUNA APLICACIÓN QUE PUEDA RECIBIR EL INTENT
+        // O SE PRODUCIRÁ UN ERROR EN TIEMPO DE EJECUCIÓN.
         if(connection) {
             if (NewtworkUtils.isConnectionAvailable(getApplicationContext()))
                 startActivity(intent);
